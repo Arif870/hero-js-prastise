@@ -138,3 +138,96 @@ function lowest(x, y, z) {
 
 let myNUmber = lowest(5, 4, 2);
 console.log("Lowest number is ", myNUmber);
+
+// array sametion
+
+let arrsum = 0;
+
+let arr = [1, 2, 4, 5, 6, 10];
+
+for (i = 0; i < arr.length; i++) {
+  arrsum = arrsum + arr[i];
+}
+
+console.log(arrsum);
+
+// array sametion by function
+
+let myArray = [1, 2, 4, 5, 6, 10];
+
+function arrSum(anyArr) {
+  let arrSumTotal = 0;
+  for (let i = 0; i < anyArr.length; i++) {
+    arrSumTotal = arrSumTotal + anyArr[i];
+  }
+
+  return arrSumTotal;
+}
+let sumFun = arrSum(myArray);
+
+console.log(sumFun);
+
+// Find the largest number of and array
+
+let arr = [39, 23, 43, 12, 44, 14, 43, 132, -12];
+
+function largestNumber(number) {
+  let largest = number[0];
+
+  for (i = 0; i < number.length; i++) {
+    if (number[i] > largest) {
+      largest = number[i];
+    }
+  }
+  return largest;
+}
+
+let largestArrNumber = largestNumber(arr);
+
+console.log(largestArrNumber);
+
+// Lowest Number
+
+function lowestNumber(numberLow) {
+  let lowest = numberLow[0];
+
+  for (let i = 0; i < numberLow.length; i++) {
+    if (numberLow[i] < lowest) {
+      lowest = numberLow[i];
+    }
+  }
+
+  return lowest;
+}
+
+let lowestArr = lowestNumber(arr);
+
+console.log(lowestArr);
+
+// fibonacci number
+
+let fibo = [0, 1];
+
+for (i = 2; i <= 10; i++) {
+  fibo[i] = fibo[i - 1] + fibo[i - 2];
+}
+console.log(fibo);
+
+// fucntional way
+
+function fibonaciNumber(number) {
+  if (typeof number != "number") {
+    return "Please give a number";
+  }
+  if (number < 2) {
+    return "Please give a number greater then 2";
+  }
+  let fibonacci = [0, 1];
+  for (let i = 2; i <= number; i++) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+  }
+  return fibonacci;
+}
+
+let n = fibonaciNumber(10);
+console.log(n);
